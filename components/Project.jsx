@@ -9,6 +9,7 @@ import {
 } from "./ui/card";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Separator } from "./ui/separator";
 export default function Project() {
   return (
@@ -29,11 +30,11 @@ export default function Project() {
         <Card>
           <CardHeader className="flex justify-between items-center">
             <CardTitle>Social Media App</CardTitle>
-            <span className="bg-accent px-4 py-1 rounded-md shadow-md">
+            <span className="bg-accent px-4 py-1 md:text-sm text-xs rounded-md shadow-md">
               React,Tailwind,socket io
             </span>
           </CardHeader>
-          <CardContent className="flex justify-between items-center">
+          <CardContent className="flex md:flex-row flex-col justify-between items-center">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
               illo reiciendis, quae veritatis repellat nisi ab blanditiis iste
@@ -49,8 +50,16 @@ export default function Project() {
             />
           </CardContent>
           <CardFooter className="flex justify-start items-center space-x-3">
-            <Button className="cursor-pointer">Website</Button>
-            <Button className="cursor-pointer">Github</Button>
+            <Link target="_blank" href="https://social-adda.vercel.app">
+              {" "}
+              <Button className="cursor-pointer">Website</Button>
+            </Link>
+            <Link
+              target="_blank"
+              href="https://github.com/SujonHiro/socialAdda"
+            >
+              <Button className="cursor-pointer">Github</Button>
+            </Link>
           </CardFooter>
         </Card>
       </motion.div>
